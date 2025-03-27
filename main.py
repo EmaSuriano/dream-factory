@@ -8,7 +8,7 @@ import torch
 
 def main():
     model_id = "sd-legacy/stable-diffusion-v1-5"
-    pipe = StableDiffusionPipeline.from_pretrained(model_id, torch_dtype=torch.float16)
+    pipe = StableDiffusionPipeline.from_pretrained(model_id)
 
     device = "cuda" if torch.cuda.is_available() else "cpu"
     pipe = pipe.to(device)
